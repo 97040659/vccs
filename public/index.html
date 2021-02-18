@@ -18,10 +18,6 @@
     <link rel="stylesheet" href="<%= BASE_URL %>static/css/loading.css" />
   </head>
   <body>
-    <noscript>
-      非常抱歉鉴于安全考量,您无法查看<%= VUE_APP_TITLE %>
-      源代码，该系统基于vue-admin-beautiful开发
-    </noscript>
     <div id="vue-admin-beautiful">
       <div class="first-loading-wrp">
         <div class="loading-wrp">
@@ -35,10 +31,6 @@
         <h1><%= VUE_APP_TITLE %></h1>
       </div>
     </div>
-    <script>
-      ;/^http(s*):\/\//.test(location.href) ||
-        alert('基于vue-admin-beautiful开发的项目需要部署到服务器下访问')
-    </script>
     <script>
       if (window.location.hostname !== 'localhost') {
         var _hmt = _hmt || []
