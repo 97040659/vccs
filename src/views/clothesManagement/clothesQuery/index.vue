@@ -37,6 +37,7 @@
       ref="tableSort"
       v-loading="listLoading"
       :data="list"
+      :current-row-key="index"
       :element-loading-text="elementLoadingText"
       :height="height"
       @selection-change="setSelectRows"
@@ -120,6 +121,7 @@
       return {
         imgShow: true,
         list: null,
+        key: [],
         imageList: [],
         listLoading: true,
         layout: 'total, sizes, prev, pager, next, jumper',
@@ -157,6 +159,7 @@
       },
       setSelectRows(val) {
         this.selectRows = val
+        console.log(this.key)
       },
       handleUpdate() {
         if (this.selectRows.length === 1){
@@ -216,8 +219,9 @@
         }
         console.log(this.list);
         const imageList = []
-        this.list.forEach((item) => {
+        this.list.forEach((item,index) => {
           imageList.push(item.clothesImg)
+          this.key.push(index)
         })
         console.log(imageList);
         this.imageList = imageList

@@ -104,9 +104,6 @@
 <script>
   import VabChart from '@/plugins/echarts'
   import { dependencies, devDependencies } from '../../../package.json'
-  import { getList } from '@/api/changeLog'
-  import { getNoticeList } from '@/api/notice'
-  import { getRepos, getStargazers } from '@/api/github'
   import { getWeek,getMonth,getImg} from '@/api/index'
   import {mapGetters} from "vuex";
   export default {
